@@ -1,0 +1,29 @@
+(FOR ADMIN)
+1. apabila program ini dijalankan dan tidak ada database bernama 'hotel' maka database
+akan terbuat otomatis beserta tabel tabelnya dan satu admin
+2. admin panel beralamat (http://localhost/hotel/admin/)
+3. anda bisa masuk menggunakan (username = admin, dan password = 111)
+4. tidak ada room type bawaan, anda dapat membuat di TYPES (add type)
+5. gambar yang diupload usahakan tidak terlalu besar
+6. gambar yang di upload akan masuk kedalam folder images/types dan nama akan kami insert ke dalam database
+7. sebagai type image kami menyiapkan template gambar 
+(images/penthouse.jpg), (images/family.jpg), (images/junior.jpg) 
+
+FITUR
+(ADMIN)
+1. login-logout admin 
+2. mendaftarkan admin melalui akun admin lain
+3. delete dan update admin personal
+4. menambahkan tipe kamar, num of rooms adalah berapa banyak kamar yang ingin anda buat, 
+yang didaftarkan dengan tipe tersebut
+5. delete dan update tipe
+6. mengganti status kamar yang terisi (occupied room) dan otomatis akan menghapus data pengunjung dari database
+7. admin tidak boleh masuk apabila tidak mempunyai data (username, dan password)
+
+(USER)
+1. booking kamar apabila tersedia
+2. mencari kamar
+3. responsive website
+
+
+

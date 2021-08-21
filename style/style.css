@@ -1,0 +1,659 @@
+h1 {
+  font-size: calc(50px + (50 - 10) * ((100vw - 320px) / (1600 - 320)));
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: clamp(2rem, 1vw, 1rem);
+  text-transform: uppercase;
+}
+
+small {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #BABAA6;
+}
+
+a:hover {
+  color: gray;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar img {
+  width: 2rem;
+  margin: 2rem 2rem;
+  display: none;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.navbar ul li {
+  font-size: clamp(2rem, 1vw, 1rem);
+  list-style: none;
+  margin: 2rem 5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar ul li {
+    margin: 2rem;
+  }
+}
+
+.navbar #menu-pop {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.navbar #menu-pop h1 {
+  color: #fff;
+  font-family: "Cinzel", serif;
+  font-size: 22vw;
+  line-height: 120px;
+}
+
+@media only screen and (max-width: 530px) {
+  .navbar #menu {
+    z-index: 100;
+  }
+  .navbar img {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+  }
+}
+
+.home {
+  background: url("../images/bg.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 10px 0px 1000px #000000E5 inset;
+          box-shadow: 8px 10px 0px 1000px #000000E5 inset;
+  color: rgba(255, 255, 255, 0.952);
+  padding: 8rem 5rem;
+}
+
+.home .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-bottom: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.home h2 {
+  padding: 1rem;
+  border: 1px solid #fff;
+}
+
+.home h1 {
+  font-size: clamp(9rem, 1vw, 1rem);
+  margin-right: 2rem;
+  letter-spacing: 1rem;
+  line-height: 12rem;
+}
+
+.home img {
+  width: 40%;
+  min-width: 280px;
+  margin-right: 5rem;
+}
+
+.home .text {
+  width: 50%;
+}
+
+.home .wrapper:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 1081px) {
+  .home #desc {
+    display: none;
+  }
+  .home h1 {
+    font-size: 8rem;
+    line-height: unset;
+    letter-spacing: unset;
+  }
+  .home img {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .home {
+    padding: 4rem;
+    position: relative;
+    padding: 5rem 20px;
+  }
+  .home .text small:nth-of-type(1) {
+    display: none;
+  }
+  .home .text h1 {
+    position: absolute;
+    left: 0;
+    top: 37%;
+    font-size: 6rem;
+  }
+  .home #btn-book {
+    position: absolute;
+    right: 20px;
+    bottom: 18%;
+    margin: 0;
+  }
+  .home #btn-book h2 {
+    font-size: 1.5rem;
+  }
+  .home small:nth-of-type(1) {
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.booking form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.booking .book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 3rem;
+}
+
+.booking .book small {
+  color: #BABAA6;
+}
+
+@media only screen and (max-width: 850px) {
+  .booking .book {
+    margin: 1rem;
+  }
+}
+
+.booking input {
+  margin: 1rem 0;
+  height: 3rem;
+  padding: 1rem 0;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-bottom: 1px solid #BABAA6;
+  outline: none;
+}
+
+.booking .btn {
+  border: 1px solid #BABAA6;
+  padding: 1rem 1rem 2.5rem 1rem;
+  min-width: 150px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .box {
+  margin: 3rem 1rem;
+  width: 30%;
+  text-align: left;
+  min-width: 280px;
+}
+
+.room {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.room img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.additional {
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.additional .icon {
+  margin: 3rem 1rem;
+  width: 15%;
+  min-width: 100px;
+  padding: 2rem;
+  border: 1px solid #BABAA6;
+}
+
+.additional .icon img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .additional {
+    padding: 1rem;
+  }
+  .additional small {
+    font-size: 1rem;
+  }
+}
+
+.escape {
+  height: 45vh;
+  color: #fff;
+  background: url("../images/room1.jpg");
+  background-size: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 4px 4px 2000px #00000080 inset;
+          box-shadow: 0px 4px 4px 2000px #00000080 inset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .escape {
+    background-size: auto 100%;
+    background-position: 50%;
+    text-align: center;
+  }
+}
+
+.brand {
+  height: 80px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.brand img {
+  height: 100%;
+  margin: 0 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .brand img {
+    margin: 0;
+    width: 60px;
+    height: auto;
+  }
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+.footer .container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer h2 {
+  margin: 3rem 0;
+}
+
+.footer img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.footer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-bottom: 1rem;
+}
+
+.footer li:nth-of-type(2) {
+  list-style-type: circle;
+}
+
+.copyright {
+  background: #161515;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.room-page {
+  text-align: center;
+  padding: 7rem 0 2rem 0;
+  background: #000;
+  color: #fff;
+}
+
+.room-page .search {
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  background: #fff;
+  width: 280px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.room-page .search button {
+  width: 20%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.room-page .search button img {
+  width: 2rem;
+  padding: 2px;
+}
+
+.room-page .search input {
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+}
+
+.room-page .booking {
+  text-align: left;
+}
+
+.room-page .booking input {
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+.detail {
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 8px 10px 0px 1000px #000000E5 inset;
+          box-shadow: 8px 10px 0px 1000px #000000E5 inset;
+  color: rgba(255, 255, 255, 0.952);
+  background: url("../images/penthouse.jpg");
+  padding: 7rem 5rem 0 5rem;
+}
+
+.detail .desc {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.detail .desc img {
+  width: 35%;
+  min-width: 280px;
+  margin-right: 3rem;
+}
+
+.detail .desc .text {
+  width: 50%;
+  min-width: 280px;
+}
+
+.detail .desc .text small {
+  margin: 2rem 0;
+}
+
+.detail .booking {
+  text-align: left;
+}
+
+.detail .booking input {
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+@media only screen and (max-width: 750px) {
+  .detail {
+    height: auto;
+    text-align: center;
+    padding: 7rem 0;
+  }
+  .detail img, .detail .desc {
+    margin: auto;
+  }
+}
+
+.booking-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 7rem;
+}
+
+.booking-form form {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking-form form h2 {
+  border-bottom: 1px solid #BABAA6;
+}
+
+.invoice {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #000;
+}
+
+.invoice .box-invoice {
+  background: #fff;
+  padding: 1rem;
+  border: 2px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.invoice .box-invoice span {
+  margin: 1rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.invoice .box-invoice small {
+  margin-right: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

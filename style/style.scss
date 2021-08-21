@@ -1,0 +1,422 @@
+$fontColor:#BABAA6;
+$primaryFont:'Poppins', sans-serif;
+$secondaryFont:'Cinzel', serif;
+
+@mixin flexCenter($space) {
+    display: flex;
+    align-items: center;
+    justify-content: $space;
+}
+@mixin containerCenter {
+    text-align: center;
+    padding: 1rem 3rem;
+}
+@mixin bgImg(){
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    box-shadow: 8px 10px 0px 1000px #000000E5 inset;
+    color:rgba(255, 255, 255, 0.952);
+}
+@mixin bookingBlack(){
+    .booking{
+        text-align: left;
+        input{
+            background: rgba(0, 0, 0, 0);
+            color: #fff;
+        }
+    }
+}
+h1{
+    font-size: calc(50px + (50 - 10) * ((100vw - 320px) / (1600 - 320)));
+    font-weight: 100;
+    text-transform:uppercase;
+    @media only screen and(max-width:800px){
+        font-size:3rem;
+    }
+}
+h2{
+    font-size:clamp(2rem, 1vw, 1rem);
+    text-transform: uppercase;
+}
+small{
+    font-size: 1.3rem;
+    font-family:$primaryFont;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 12px;
+}
+a{
+    &:hover{
+        color:gray;
+    }
+    text-decoration: none;
+    color: $fontColor;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-family: $primaryFont;
+    img{
+        width:2rem;
+        margin:2rem 2rem;
+        display:none;
+    }
+    ul{
+        @include flexCenter(left);
+        li{
+            font-size: clamp(2rem, 1vw, 1rem);
+            list-style: none;
+            margin: 2rem 5rem;
+            @media only screen and(max-width:800px){
+                margin:2rem;
+            }
+        }
+    }
+    #menu-pop{
+        height: 100vh;
+        width: 100%;
+        background: #000;
+        @include flexCenter(left);
+        flex-direction: column;
+        display:none;
+        h1{
+            color: #fff;
+            font-family: $secondaryFont;
+            font-size:22vw;
+            line-height:120px;
+        }
+    }
+    @media only screen and(max-width:530px){
+        #menu{
+            z-index: 100;
+        }
+        img{
+            display: block;
+        }
+        ul{
+            display: none;
+        }
+    }
+
+}
+
+.home{
+    background: url("../images/bg.jpg");
+    @include bgImg();
+    padding: 8rem 5rem;
+    .wrapper{
+        @include flexCenter(left);
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    h2{
+        padding: 1rem;
+        border: 1px solid #fff;
+    }
+    h1{
+        font-size:clamp(9rem, 1vw, 1rem);
+        margin-right:2rem;
+        letter-spacing: 1rem;
+        line-height: 12rem;
+    }
+    img{
+        width:40%;
+        min-width:280px;
+        margin-right:5rem
+    }
+    .text{
+        width:50%;
+    }
+    .wrapper:nth-of-type(2){
+        @include flexCenter(space-between);
+    }
+    @media only screen and(max-width:1081px){
+        #desc{
+            display:none;
+        }
+        h1{
+            font-size: 8rem;
+            line-height:unset;
+            letter-spacing: unset;
+        }
+        img{
+            margin-right: 1rem;
+        }
+    }
+    @media only screen and(max-width:800px){
+        padding:4rem;
+        position:relative;
+        padding:5rem 20px;
+        .text{
+            small:nth-of-type(1){
+                display:none;
+            }
+            h1{
+                position:absolute;
+                left:0;
+                top:37%;
+                font-size:6rem;
+            }
+        }
+        #btn-book{
+            position:absolute;
+            right:20px;
+            bottom:18%;
+            margin: 0;
+            h2{
+                font-size:1.5rem;
+            }
+        }
+        small:nth-of-type(1){
+            position:absolute;
+            bottom:10px;
+        }
+    }
+}
+
+.booking{
+    @include flexCenter(center);
+    flex-wrap:wrap;
+    form{
+        @include flexCenter(center);
+        flex-wrap:wrap;
+    }
+    .book{
+        display:flex;
+        flex-direction:column;
+        margin:1rem 3rem;
+        small{
+            color:$fontColor;
+        }
+        @media only screen and(max-width:850px){
+            margin:1rem;
+        }
+    }
+    input{
+        margin: 1rem 0;
+        height: 3rem;
+        padding: 1rem 0;
+        font-family: $primaryFont;
+        border:none;
+        border-bottom: 1px solid $fontColor;
+        outline: none;
+    }
+    .btn{
+        border: 1px solid $fontColor;
+        padding: 1rem 1rem 2.5rem 1rem;
+        min-width: 150px;
+    }
+
+}
+.container{
+    @include flexCenter(space-around);
+    flex-wrap: wrap;
+    .box{
+        margin:3rem 1rem;
+        width:30%;
+        text-align:left;
+        min-width: 280px;
+    }  
+}
+.room{
+    background:#000;
+    color:#fff;
+    @include containerCenter();
+    img{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+}
+
+
+.additional{
+    @include containerCenter();
+    .icon{
+        margin:3rem 1rem;
+        width:15%;
+        min-width:100px;
+        padding:2rem;
+        border:1px solid $fontColor;
+        img{
+            width: 100%;
+        }
+    }
+    @media only screen and(max-width:800px){
+        padding:1rem;
+        small{
+            font-size:1rem;
+        }
+        
+    }
+}
+
+.escape{
+    height:45vh;
+    color:#fff;
+    background: url("../images/room1.jpg");
+    background-size: 100% ;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px 2000px #00000080 inset;
+    @include flexCenter(center);
+    flex-direction:column;
+    @media only screen and(max-width:600px){
+        background-size: auto 100% ;
+        background-position: 50%;
+        text-align: center;
+    }
+}
+
+.brand{
+    height: 80px;
+    padding: 1rem;
+    @include flexCenter(center);
+    img{
+        height: 100%;
+        margin: 0 2rem;
+        @media only screen and(max-width:700px){
+            margin: 0;
+            width: 60px;
+            height: auto;
+        }
+    }
+}
+
+.footer{
+    background:#000;
+    color:#fff;
+    @include containerCenter();
+    .container{
+        align-items: flex-start;
+    }
+    h2{
+        margin: 3rem 0;
+    }
+    img{
+        width: 2rem;
+        margin-right: 1rem;
+    }
+    li{
+        @include flexCenter(left);
+        margin-bottom: 1rem ;
+    }
+    li:nth-of-type(2){
+        list-style-type: circle;
+    }
+}
+
+.copyright{
+    background: rgb(22, 21, 21);
+    color:#fff;
+    @include flexCenter(center);
+    padding: 1rem;
+}
+
+.room-page{
+   text-align: center;
+   padding:7rem 0 2rem 0;
+   background:#000;
+   color:#fff;
+   .search{
+       border-radius:30px;
+       @include flexCenter(left);
+       background: #fff;
+       width:280px;
+       margin:1rem auto;
+       padding: 1rem;
+       button{
+           width: 20%;
+           background: #fff;
+           border:none;
+            cursor: pointer;
+           img{
+               width:2rem;
+               padding: 2px;
+           }
+       }
+       input{
+           border:none;
+           outline:none;
+           font-family: $primaryFont;
+           width:80%;
+       }
+   }
+   @include bookingBlack();
+   
+}
+
+.detail{
+    @include bgImg();
+    background: url("../images/penthouse.jpg");
+    padding: 7rem 5rem 0 5rem;
+    .desc{
+        margin: 2rem 0;
+        @include flexCenter(center);
+        flex-wrap: wrap;
+        align-items: flex-start;
+        img{
+            width: 35%;
+            min-width:280px;
+            margin-right: 3rem;
+        }
+        .text{
+            width: 50%;
+            min-width: 280px;
+            small{
+                margin: 2rem 0;;
+            }
+        }
+    }
+   @include bookingBlack();
+   @media only screen and(max-width:750px){
+        height:auto;
+        text-align: center;
+        padding: 7rem 0;
+        img,.desc{
+            margin: auto;
+        }
+   }
+}
+.booking-form{
+    @include flexCenter(center);
+    padding-top: 7rem;
+    form{
+        align-items: flex-start;
+        flex-direction: column;
+        h2{
+            border-bottom: 1px solid $fontColor;
+        }
+    }
+}
+
+.invoice{
+    width: 100%;
+    height: 100vh;
+    @include flexCenter(center);
+    background: #000;
+    .box-invoice{
+        background: #fff;
+        padding:1rem;
+        border: 2px solid #000;
+        @include flexCenter(center);
+        align-items: flex-start;
+        flex-direction: column;
+        span{
+            margin: 1rem 0;
+            width: 100%;
+            @include flexCenter(space-between);
+        }
+        small{
+            margin-right: 1rem;
+        }
+    }
+}
